@@ -1,0 +1,243 @@
+/* التنسيق العام للموقع */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffb6c1; 
+    display: block;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+/* تنسيق الصفحات والتحكم في ظهورها */
+.page {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* حاوية القلب والزرار في الصفحة الأولى */
+.heart-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 40px auto;
+}
+
+/* تأثير رسم القلب بالـ SVG */
+.heart-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #ff0000;
+    stroke-width: 1;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    animation: drawHeart 2.5s ease-in-out forwards, fillHeart 1s ease-in-out 2s forwards;
+}
+
+/* زرار البداية بالصيني جوة القلب */
+#start-btn {
+    position: relative;
+    z-index: 10;
+    background-color: white;
+    color: #ff0000;
+    border: none;
+    padding: 12px 25px;
+    font-size: 22px; 
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    opacity: 0;
+    margin-top: 120px;
+    animation: fadeInBtn 1s ease-in-out 2.5s forwards;
+    transition: transform 0.2s;
+}
+
+#start-btn:hover {
+    transform: scale(1.1);
+}
+
+/* التنسيق الموحد للزراير العامة في الصفحات */
+button:not(#start-btn) {
+    background-color: #ff477e;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-size: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:not(#start-btn):hover {
+    transform: scale(1.05);
+    background-color: #ff2a65;
+}
+
+/* نظام الجدول الصارم لترتيب العناصر عمودياً وجنباً إلى جنب */
+.quiz-table {
+    display: table;
+    margin: 30px auto;
+    border-spacing: 40px 0; /* مسافة أفقية بين الصندوقين */
+}
+
+.quiz-column {
+    display: table-cell;
+    vertical-align: top;
+    text-align: center;
+}
+
+/* إجبار الزرار أن يظهر في السطر الأول وتحته مسافة مريحة */
+.quiz-column button {
+    display: block;
+    margin: 0 auto 20px auto !important;
+}
+
+/* تنسيق صور الأسئلة الموحد وعرضها */
+.quiz-img {
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 25px;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.buttons-row {
+    display: block;
+    margin: 40px auto;
+}
+
+.buttons-row button {
+    margin: 0 15px;
+}
+
+h2 {
+    color: #4a0e17;
+    margin-bottom: 20px;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+/* كرت صفحة التهنئة */
+.congrats-card {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 40px;
+    border-radius: 30px;
+    border: 3px dashed #ff477e;
+    display: block;
+    width: 500px;
+    margin: 40px auto;
+}
+
+/* زرار القلب الأحمر (下一个) */
+.next-heart-container {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 30px auto 0 auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.next-heart-container:hover {
+    transform: scale(1.15);
+}
+
+.small-heart-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.heart-btn-text {
+    position: relative;
+    z-index: 5;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    padding-top: 55px;
+}
+
+/* تنسيق شاشة الرسالة الطويلة الأخيرة (يمين ويسار باستخدام نظام جدول الـ CSS المعتمد) */
+.final-container {
+    display: table;
+    max-width: 950px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.final-right {
+    display: table-cell;
+    width: 40%;
+    vertical-align: middle;
+}
+
+.final-img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    min-height: 480px;
+}
+
+.final-left {
+    display: table-cell;
+    width: 60%;
+    padding: 40px;
+    text-align: left; 
+    vertical-align: middle;
+}
+
+.final-left h2 {
+    text-align: left;
+    margin-bottom: 15px;
+    color: #ff1493;
+    font-size: 28px;
+}
+
+.letter-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.letter-text p {
+    margin-bottom: 12px;
+}
+
+.highlight-text {
+    font-weight: bold;
+    color: #ff477e;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* أنيميشن */
+@keyframes drawHeart { to { stroke-dashoffset: 0; } }
+@keyframes fillHeart { to { fill: #ff0000; } }
+@keyframes fadeInBtn { to { opacity: 1; } }
