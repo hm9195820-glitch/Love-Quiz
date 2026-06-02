@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار الحب الصيني 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="page1" class="page active">
+        <div class="heart-container">
+            <svg class="heart-svg" viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+            </svg>
+            <button id="start-btn">你准备好了吗</button>
+        </div>
+    </div>
+
+    <div id="page2" class="page hidden">
+        <h2>你更喜欢谁？</h2>
+        <div class="quiz-table">
+            <div class="quiz-column">
+                <button onclick="answerQuestion1('我')">我</button>
+                <img src="p1_img1.jpg.jpeg" alt="Photo 1" class="quiz-img">
+            </div>
+            <div class="quiz-column">
+                <button onclick="answerQuestion1('我？')">我？</button>
+                <img src="p1_img2.jpg.jpeg" alt="Photo 2" class="quiz-img">
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="page3" class="page hidden">
+        <h2>你的女朋友更喜欢谁</h2>
+        <div class="quiz-table">
+            <div class="quiz-column">
+                <button onclick="answerQuestion2('周文河')">周文河</button>
+                <img src="p2_img2.jpg.jpeg" alt="Photo 3" class="quiz-img">
+            </div>
+            <div class="quiz-column">
+                <button onclick="answerQuestion2('周文河 ')">周文河</button>
+                <img src="p2_img1.jpg.jpeg" alt="Photo 4" class="quiz-img">
+            </div>
+        </div>
+    </div>
+
+    <div id="page4" class="page hidden">
+        <h2>你的女朋友更喜欢我谁</h2>
+        <div class="quiz-table">
+            <div class="quiz-column">
+                <button onclick="answerQuestion3('周文河')">周文河</button>
+                <img src="p3_img2.jpg.jpeg" alt="周文河" class="quiz-img">
+            </div>
+            <div class="quiz-column">
+                <button onclick="answerQuestion3('小猫咪')">小猫咪</button>
+                <img src="p3_img1.jpg.jpeg" alt="小猫咪" class="quiz-img">
+            </div>
+        </div>
+    </div>
+
+    <div id="page5" class="page hidden">
+        <h2>你知道你的女朋友很爱你吗</h2>
+        <div class="buttons-row">
+            <button onclick="answerQuestion4(true)">知道</button>
+            <button onclick="answerQuestion4(false)">不知道</button>
+        </div>
+    </div>
+
+    <div id="page6" class="page hidden">
+        <div class="congrats-card">
+            <h2>考试结束啦，恭喜恭喜 🎉</h2>
+            <div class="next-heart-container" onclick="nextPage(7)">
+                <svg class="small-heart-svg" viewBox="0 0 32 29.6">
+                    <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                    c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" fill="#ff0000"/>
+                </svg>
+                <span class="heart-btn-text">下一个</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="page7" class="page hidden">
+        <div class="final-container">
+            <div class="final-right">
+                <img src="final_love.jpg.jpeg" alt="Love Image" class="final-img">
+            </div>
+            <div class="final-left">
+                <h2>考试结束啦，宝宝 💖</h2>
+                <div class="letter-text">
+                    <p>谢谢你的出现，虽然现在我和你没办法见面，我还想抱抱你，没事宝宝，我们彼此應該不放弃对吧，我想抱抱你啊～</p>
+                    <p>但是我很爱你宝宝，你真的不知道有多爱你！我希望你也会永远爱我，我无所谓等待多久，我只永远想和你在一起。</p>
+                    <p>宝宝我没想到有一天你会做男朋友，但是我很开心，有你在，就是幸福 宝宝。</p>
+                    <p>
+                    但是我想给你说，你妈妈一定很开心因为她看到了你有女朋友关心你，她就安心，我不想你担心宝宝，我会好好珍惜你，我会永远爱你。
+                    </p>
+                    <p>谢谢你的耐心宝宝，你知道在我心里你是全世界最好的男朋友吗？宝宝也很帅，性格也挺好的呀，也好可爱！我不会失去你 宝宝 你放心吧～</p>
+                    <p class="highlight-text">么么哒，爱你哦 💋</p>
+                    <p class="highlight-text">谢谢宝宝你在我身边哦！！！🥰</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
